@@ -10,6 +10,10 @@
                         <field name="value" widget="percentage"/>
                     </group>
                 </sheet>
+                <footer>
+                    <button string="Save" class="btn-primary" type="object" name="set_default"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
             </form>
         </field>
     </record>
@@ -18,7 +22,7 @@
         <field name="name">Default Profit Percentage</field>
         <field name="res_model">profit.percentage.config</field>
         <field name="view_mode">form</field>
-        <field name="target">current</field>
+        <field name="target">new</field>
     </record>
     
     <menuitem id="menu_profit_percentage" 
