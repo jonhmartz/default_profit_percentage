@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="profit_percentage_form_view" model="ir.ui.view">
+        <field name="name">profit.percentage.config.form</field>
+        <field name="model">profit.percentage.config</field>
+        <field name="arch" type="xml">
+            <form string="Default Profit Percentage">
+                <sheet>
+                    <group>
+                        <field name="value" widget="percentage"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_profit_percentage" model="ir.actions.act_window">
+        <field name="name">Default Profit Percentage</field>
+        <field name="res_model">profit.percentage.config</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+    </record>
+    
+    <menuitem id="menu_profit_percentage" 
+              name="Default Profit Percentage" 
+              action="action_profit_percentage"
+              parent="base.menu_administration" 
+              sequence="100"/>
+</odoo>
